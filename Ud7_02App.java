@@ -22,7 +22,9 @@ public class Ud7_02App {
 		
 		do {
 			precio = Double.parseDouble(JOptionPane.showInputDialog("Introduzca un precio nuevo (0 para salir)"));
-			lista.add(precio);
+			if (precio != 0) {
+				lista.add(precio);
+			}
 		} while (precio != 0);
 		
 		return lista;
@@ -80,7 +82,7 @@ public class Ud7_02App {
 		// Metodo para calcular el numero de articulos
 	public static int numeroArticulos(ArrayList<Double>lista ) {
 		
-		return lista.size() - 1;
+		return lista.size();
 		
 	}
 
