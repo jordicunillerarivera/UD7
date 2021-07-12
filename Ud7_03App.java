@@ -12,6 +12,7 @@ public class Ud7_03App {
 
 	}
 	
+		// Metodo que muestra un menu
 	public static void menu(Hashtable<String, Double> inventario) {
 		
 		int opcion = Integer.parseInt(JOptionPane.showInputDialog("Seleccione que desea hacer:\n1. Consultar el inventario\n2. Consultar el precio de un articulo\n3. Introducir un articulo"));
@@ -37,7 +38,7 @@ public class Ud7_03App {
 		
 	}
 	
-	// Metodo para crear un hastable
+		// Metodo para crear un hastable y rellenarlo
 	public static Hashtable<String, Double> inicioHashtable(){
 		
 		Hashtable<String, Double> hash = new Hashtable<>();
@@ -57,6 +58,7 @@ public class Ud7_03App {
 		
 	}
 	
+		// Metodo para introducir un producto nuevo
 	public static void introduccionDatos(Hashtable<String, Double> hash) {
 		
 		String articulo = JOptionPane.showInputDialog("Introduce el nombre del articulo");
@@ -68,6 +70,7 @@ public class Ud7_03App {
 		
 	}
 	
+		// Metodo para consultar el precio de un articulo
 	public static void consultaPrecio(Hashtable<String, Double> hash) {
 		
 		String articulo = JOptionPane.showInputDialog("Introduce el nombre del articulo a buscar");
@@ -78,7 +81,7 @@ public class Ud7_03App {
 		
 	}
 	
-	// Metodo para recorrer un hashtable
+		// Metodo para recorrer un hashtable
 	public static void recorrerHashtable(Hashtable<String, Double> hash) {
 		
 		Enumeration<String> llave = hash.keys();

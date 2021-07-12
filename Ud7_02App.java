@@ -13,6 +13,7 @@ public class Ud7_02App {
 		
 	}
 	
+		// Metodo para crear un ArrayList y rellenarla 
 	public static ArrayList<Double> crearArrayList() {
 		
 		ArrayList<Double> lista = new ArrayList<>();
@@ -20,16 +21,15 @@ public class Ud7_02App {
 		double precio;
 		
 		do {
-			
-			precio = Double.parseDouble(JOptionPane.showInputDialog("Introduzca un uevo precio (0 para salir)"));
+			precio = Double.parseDouble(JOptionPane.showInputDialog("Introduzca un precio nuevo (0 para salir)"));
 			lista.add(precio);
-			
 		} while (precio != 0);
 		
 		return lista;
 		
 	}
 	
+		// Metodo para mostrar el ArrayList
 	public static void mostrar(ArrayList<Double> lista) {
 		
 		double precioBruto = precioBruto(lista);
@@ -41,6 +41,7 @@ public class Ud7_02App {
 		
 	}
 	
+		// Metodo para introducir cuanto se ha pagado y cuanto hay qeu devolver
 	public static void pagar(ArrayList<Double> lista) {
 		
 		double pagado = Double.parseDouble(JOptionPane.showInputDialog("Cantidad a pagar " + precioIva(lista) + "€. Entra la cantidad pagada"));
@@ -55,6 +56,7 @@ public class Ud7_02App {
 		
 	}
 	
+		// Metodo para calcular el precio bruto
 	public static double precioBruto(ArrayList<Double> lista) {
 		
 		Iterator<Double> it = lista.iterator();
@@ -67,6 +69,7 @@ public class Ud7_02App {
 		
 	}
 	
+		// Metodo para calcular el precio con IVA
 	public static double precioIva(ArrayList<Double> lista) {
 		
 		double precioBruto = precioBruto(lista);
@@ -74,6 +77,7 @@ public class Ud7_02App {
 		
 	}
 	
+		// Metodo para calcular el numero de articulos
 	public static int numeroArticulos(ArrayList<Double>lista ) {
 		
 		return lista.size() - 1;
