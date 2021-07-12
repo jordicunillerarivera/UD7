@@ -126,7 +126,12 @@ public class Ud7_04App {
 		do {
 			precio = JOptionPane.showInputDialog("Introduzca el nombre del prducto deseado (0 para salir)");
 			if (!precio.equals("0")) {
-				lista.add(hash.get(precio));
+				int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca la cantidad de producto (0 para cancelar)"));
+				if (cantidad != 0) {
+					for (int i = 0; i < cantidad; i++) {
+						lista.add(hash.get(precio));
+					}
+				}
 			}
 		} while (!precio.equals("0"));
 		
